@@ -1,34 +1,40 @@
 [![Build pass](https://github.com/aave/aave-v3-core/actions/workflows/node.js.yml/badge.svg)](https://github.com/aave/aave-v3-core/actions/workflows/node.js.yml)
 [![codecov](https://codecov.io/gh/aave/aave-v3-core/branch/master/graph/badge.svg?token=U50KN38G67)](https://codecov.io/gh/aave/aave-v3-core)
-
+```                                                                                    
+EEEEEEEEEEEEEEEEEEEEEEDDDDDDDDDDDDD        EEEEEEEEEEEEEEEEEEEEEENNNNNNNN        NNNNNNNN
+E::::::::::::::::::::ED::::::::::::DDD     E::::::::::::::::::::EN:::::::N       N::::::N
+E::::::::::::::::::::ED:::::::::::::::DD   E::::::::::::::::::::EN::::::::N      N::::::N
+EE::::::EEEEEEEEE::::EDDD:::::DDDDD:::::D  EE::::::EEEEEEEEE::::EN:::::::::N     N::::::N
+  E:::::E       EEEEEE  D:::::D    D:::::D   E:::::E       EEEEEEN::::::::::N    N::::::N
+  E:::::E               D:::::D     D:::::D  E:::::E             N:::::::::::N   N::::::N
+  E::::::EEEEEEEEEE     D:::::D     D:::::D  E::::::EEEEEEEEEE   N:::::::N::::N  N::::::N
+  E:::::::::::::::E     D:::::D     D:::::D  E:::::::::::::::E   N::::::N N::::N N::::::N
+  E:::::::::::::::E     D:::::D     D:::::D  E:::::::::::::::E   N::::::N  N::::N:::::::N
+  E::::::EEEEEEEEEE     D:::::D     D:::::D  E::::::EEEEEEEEEE   N::::::N   N:::::::::::N
+  E:::::E               D:::::D     D:::::D  E:::::E             N::::::N    N::::::::::N
+  E:::::E       EEEEEE  D:::::D    D:::::D   E:::::E       EEEEEEN::::::N     N:::::::::N
+EE::::::EEEEEEEE:::::EDDD:::::DDDDD:::::D  EE::::::EEEEEEEE:::::EN::::::N      N::::::::N
+E::::::::::::::::::::ED:::::::::::::::DD   E::::::::::::::::::::EN::::::N       N:::::::N
+E::::::::::::::::::::ED::::::::::::DDD     E::::::::::::::::::::EN::::::N        N::::::N
+EEEEEEEEEEEEEEEEEEEEEEDDDDDDDDDDDDD        EEEEEEEEEEEEEEEEEEEEEENNNNNNNN         NNNNNNN
+                                                                                                                                                                               
 ```
-        .///.                .///.     //.            .//  `/////////////-
-       `++:++`              .++:++`    :++`          `++:  `++:......---.`
-      `/+: -+/`            `++- :+/`    /+/         `/+/   `++.
-      /+/   :+/            /+:   /+/    `/+/        /+/`   `++.
-  -::/++::`  /+:       -::/++::` `/+:    `++:      :++`    `++/:::::::::.
-  -:+++::-`  `/+:      --++/---`  `++-    .++-    -++.     `++/:::::::::.
-   -++.       .++-      -++`       .++.    .++.  .++-      `++.
-  .++-         -++.    .++.         -++.    -++``++-       `++.
- `++:           :++`  .++-           :++`    :+//+:        `++:----------`
- -/:             :/-  -/:             :/.     ://:         `/////////////-
-```
 
-# Aave Protocol v3
+# Eden Finance Protocol v1
 
-This repository contains the smart contracts source code and markets configuration for Aave Protocol V3. The repository uses Docker Compose and Hardhat as development environment for compilation, testing and deployment tasks.
+This repository contains the smart contracts source code and markets configuration for Eden Protocol V3. The repository uses Docker Compose and Hardhat as development environment for compilation, testing and deployment tasks.
 
-## What is Aave?
+## What is Eden?
 
-Aave is a decentralized non-custodial liquidity markets protocol where users can participate as suppliers or borrowers. Suppliers provide liquidity to the market to earn a passive income, while borrowers are able to borrow in an overcollateralized (perpetually) or undercollateralized (one-block liquidity) fashion.
+Eden is a decentralized non-custodial liquidity markets protocol where users can participate as suppliers or borrowers. Suppliers provide liquidity to the market to earn a passive income, while borrowers are able to borrow in an overcollateralized (perpetually) or undercollateralized (one-block liquidity) fashion.
 
 ## Documentation
 
-See the link to the technical paper or visit the Aave Developer docs
+See the link to the technical paper or visit the Eden Developer docs
 
 - [Technical Paper](./techpaper/Aave_V3_Technical_Paper.pdf)
 
-- [Developer Documentation](https://docs.aave.com/developers/)
+- [Developer Documentation](https://docs.eden.com/developers/)
 
 ## Audits and Formal Verification
 
@@ -60,14 +66,14 @@ You can join the [Discord](http://aave.com/discord) channel or the [Governance F
 
 ## Getting Started
 
-You can install `@aave/core-v3` as an NPM package in your Hardhat or Truffle project to import the contracts and interfaces:
+You can install `@eden-labs/core-v3` as an NPM package in your Hardhat or Truffle project to import the contracts and interfaces:
 
-`npm install @aave/core-v3`
+`npm install @@eden-labs/core-v3`
 
 Import at Solidity files:
 
 ```
-import {IPool} from "@aave/core-v3/contracts/interfaces/IPool.sol";
+import {IPool} from "@@eden-labs/core-v3/contracts/interfaces/IPool.sol";
 
 contract Misc {
 
@@ -83,7 +89,7 @@ The JSON artifacts with the ABI and Bytecode are also included in the bundled NP
 Import JSON file via Node JS `require`:
 
 ```
-const PoolV3Artifact = require('@aave/core-v3/artifacts/contracts/protocol/pool/Pool.sol/Pool.json');
+const PoolV3Artifact = require('@@eden-labs/core-v3/artifacts/contracts/protocol/pool/Pool.sol/Pool.json');
 
 // Log the ABI into console
 console.log(PoolV3Artifact.abi)
